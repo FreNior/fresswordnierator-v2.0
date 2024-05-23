@@ -32,7 +32,4 @@ function randomize() {
     for (let a = 0; a < randomCharacterTwo.length; a++) {
         randomCharacterOne.pop()
     }
-
-    console.log(randomCharacterOne)
-    console.log(randomCharacterTwo)
 }
