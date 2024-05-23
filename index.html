@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fressword Nierator</title>
-    <script src="js/script.js"> </script>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,17 +18,17 @@
             <div class="title">
                 <h1>Generate a <br><span>random password</span> </h1>
                 <p>Never use a insecure password again</p>
-                <button onclick="generateP()">Generate passwords</button>
+                <button onclick="randomize()">Generate passwords</button>
             </div>
-
+            
             <div class="separator"></div>
-
+            
             <div class="password-container">
-                <div class="pass-one">
+                <div class="pass-one-container">
                     <p id="pass-one"> </p>
                 </div>
 
-                <div class="pass-two">
+                <div class="pass-two-container">
                     <p id="pass-two"> </p>
                 </div>
             </div>
@@ -38,5 +37,6 @@
     <footer>
         <p>2024&copy; by Frenior&trade;</p>
     </footer>
+    <script src="js/script.js"> </script>
 </body>
 </html>
