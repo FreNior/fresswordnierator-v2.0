@@ -16,6 +16,7 @@ body {
     width: 550px;
     height: 550px;
     margin: 1rem auto;
+    border-radius: 5px;
 }
 
 .title {

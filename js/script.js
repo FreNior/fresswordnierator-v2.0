@@ -7,7 +7,9 @@ let passwordTwo = document.getElementById("pass-two")
 let randomCharacterOne = []
 let randomCharacterTwo = []
 
-function randomize() {
+const btn = document.querySelector("#rando-btn")
+
+btn.addEventListener("click", function() {
     for (let i = 0; i < 9; i++) {
         let pickRandomCharacterOne = Math.floor(Math.random() * characters.length)
         randomCharacterOne.push(characters[pickRandomCharacterOne])
@@ -32,4 +34,5 @@ function randomize() {
     for (let a = 0; a < randomCharacterTwo.length; a++) {
         randomCharacterOne.pop()
     }
-}
+
+})
