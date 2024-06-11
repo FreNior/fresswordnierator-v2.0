@@ -1,40 +1,48 @@
-const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "#", "*", "_", "-"
-];
+// Seleção de elementos
+const passwordOne = document.querySelector("#pass-one")
+const passwordTwo = document.querySelector("#pass-two")
 
-let passwordOne = document.getElementById("pass-one")
-let passwordTwo = document.getElementById("pass-two")
+// Funções
+const randomize = () => {
+    const characters = [
+        "A","B","C",
+        "D","E","F",
+        "G","H","I",
+        "J","K","L",
+        "M","N","O",
+        "P","Q","R",
+        "S","T","U",
+        "V","W","X",
+        "Y","Z","a",
+        "b","c","d",
+        "e","f","g",
+        "h","i","j",
+        "k","l","m",
+        "n","o","p",
+        "q","r","s",
+        "t","u","v",
+        "w","x","y",
+        "z","0","1",
+        "2","3","4",
+        "5","6","7",
+        "8","9","#",
+        "*","_","-"
+    ];
 
-let randomCharacterOne = []
-let randomCharacterTwo = []
+    let characterTable1 = []
+    let characterTable2 = []
 
-function randomize() {
-    for (let i = 0; i < 9; i++) {
-        let pickRandomCharacterOne = Math.floor(Math.random() * characters.length)
-        randomCharacterOne.push(characters[pickRandomCharacterOne])
-            
-        let pickRandomCharacterTwo = Math.floor(Math.random() * characters.length)
-        randomCharacterTwo.push(characters[pickRandomCharacterTwo])
-    }
+    for (let i = 1; i < 8; i++) {
+        characterTable1.push(characters[Math.floor(Math.random() * characters.length)])
+        characterTable2.push(characters[Math.floor(Math.random() * characters.length)])
 
-    for (let i = 0; i < randomCharacterOne.length; i++) {
-        passwordOne.textContent = randomCharacterOne.join("")
-        passwordTwo.textContent = randomCharacterTwo.join("")
-    }
-
-    randomCharacterOne.splice(0, randomCharacterOne.length)
-    randomCharacterTwo.splice(0, randomCharacterTwo.length)  
-
-
-    for (let a = 0; a < randomCharacterOne.length; a++) {
-        randomCharacterOne.pop()
-    }
-    
-    for (let a = 0; a < randomCharacterTwo.length; a++) {
-        randomCharacterOne.pop()
-    }
+}
+passwordOne.innerText = characterTable1.join("")
+passwordTwo.innerText = characterTable2.join("")
 
 }
 
+// Eventos
 const btn = document.querySelector("#rando-btn")
 
 btn.addEventListener("click", randomize)
